@@ -1,2 +1,31 @@
 <h1>Home#show</h1>
 <p>Find me in app/views/home/show.html.erb</p>
+
+<table border="1">
+  <tr>
+    <th>Item Name</th>
+    <th>Category</th>
+    <th>Event Key</th>
+    <th>Image</th>
+    <th>Nick Name</th>
+  </tr>
+  <% @item.each do |i| %>
+    <tr>
+      <td>
+        <%= i.name %>
+      </td>
+      <td>
+        <%= i.price %>
+      </td>
+      <td>
+        <%= i.amount %>
+      </td>
+      <td>
+        <%= i.price * i.amount %>
+      </td>
+      <td>
+        <%= i.category %>
+      </td>
+    </tr>
+  <% end %>
+</table>
