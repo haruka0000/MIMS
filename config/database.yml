@@ -21,11 +21,7 @@ test:
   database: db/test.sqlite3
 
 production:
-    adapter: postgresql
-    encoding: unicode
-    database:
-    pool: 5
-    username:
-    password:
+  adapter: pg
+  database: db/production.pg
 #  <<: *default
 #  database: db/production.sqlite3
