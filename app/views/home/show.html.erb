@@ -6,25 +6,25 @@
     <th>Item Name</th>
     <th>Category</th>
     <th>Event Key</th>
+    <th>Finder</th>
     <th>Image</th>
-    <th>Nick Name</th>
   </tr>
   <% @item.each do |i| %>
     <tr>
       <td>
-        <%= i.name %>
-      </td>
-      <td>
-        <%= i.price %>
-      </td>
-      <td>
-        <%= i.amount %>
-      </td>
-      <td>
-        <%= i.price * i.amount %>
+        <%= i.i_name %>
       </td>
       <td>
         <%= i.category %>
+      </td>
+      <td>
+        <%= i.e_key %>
+      </td>
+      <td>
+        <%= i.f_name%>
+      </td>
+      <td>
+        <%= image_tag(url_for(:action => 'get_image', :id => i.id), :size => '100x100')%>
       </td>
     </tr>
   <% end %>
